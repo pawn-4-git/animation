@@ -12,8 +12,7 @@ import java.util.List;
  *
  * @author Pawn
  */
-public class Human {
-    private String name;
+public class Human extends Character{
     private SexEnum sex;
     
     private List<Human> brother;
@@ -26,22 +25,8 @@ public class Human {
     private List<String> characteristics;
     
     public Human(String name,SexEnum sex){
-        this.name=name;
+        setName(name);
         this.sex=sex;
-    }
-
-    /**
-     * @return the name
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * @param name the name to set
-     */
-    public void setName(String name) {
-        this.name = name;
     }
 
     /**

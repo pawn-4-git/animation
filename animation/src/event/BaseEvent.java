@@ -6,6 +6,7 @@
 package event;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  *
@@ -14,6 +15,7 @@ import java.util.Date;
 public class BaseEvent {
     private String eventinfo="";
     private Date eventTime;
+    private List<Character> characterList;
 
     /**
      * @return the eventinfo
@@ -41,6 +43,20 @@ public class BaseEvent {
      */
     public void setEventTime(Date eventTime) {
         this.eventTime = eventTime;
+    }
+
+    /**
+     * @return the characterList
+     */
+    public List<Character> getCharacterList() {
+        return characterList;
+    }
+
+    /**
+     * @param characterList the characterList to set
+     */
+    public void setCharacterList(List<Character> characterList) {
+        this.characterList = characterList;
     }
     
     
