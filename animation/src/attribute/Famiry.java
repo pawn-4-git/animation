@@ -10,7 +10,8 @@ package attribute;
  * @author Pawn
  */
 public enum Famiry implements Attribute{
-    Father("父親"),Mother("母親"),BBBrother("兄弟"),SSSister("姉妹"),BSBrother("兄妹"),SBSister("姉弟");
+    Father("父親"),Mother("母親"),BBBrother("兄弟"),SSSister("姉妹"),BSBrother("兄妹"),
+    SBSister("姉弟"),LBrother("兄"),YBrother("弟"),LSisther("姉"),YSisther("妹");
     private String value;
     
     private Famiry(String value){
