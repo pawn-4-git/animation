@@ -17,7 +17,7 @@ import java.util.logging.Logger;
  *
  * @author Pawn
  */
-public class AnimationInfo {
+public abstract class AnimationInfo {
     private String animationName="";
     private Date startDate;
     private Date endDate;
@@ -81,6 +81,8 @@ public class AnimationInfo {
             Logger.getLogger(AnimationInfo.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+    public abstract void doSettingEpisode();
     
     public void addEpisode(EpisodeInfo episodeInfo){
         this.episodeInfoList.add(episodeInfo);
