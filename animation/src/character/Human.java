@@ -24,6 +24,8 @@ public class Human extends Character{
     private boolean existence;
     private List<String> characteristics;
     
+    public Human(){}
+    
     public Human(String name,SexEnum sex){
         setName(name);
         this.sex=sex;
