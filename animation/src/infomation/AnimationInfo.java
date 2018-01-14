@@ -7,21 +7,17 @@ package infomation;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
  * @author Pawn
  */
-public abstract class AnimationInfo {
-    private String animationName="";
+public class AnimationInfo {
+    private String animationName;
+    
     private Date startDate;
     private Date endDate;
-    private List<EpisodeInfo> episodeInfoList=new ArrayList<>();
     
     SimpleDateFormat sdf=new SimpleDateFormat("yyyyMMdd");
 
@@ -53,12 +49,8 @@ public abstract class AnimationInfo {
         this.startDate = startDate;
     }
     
-    public void setStartDate(String yyyymmdd){
-        try {
-            this.startDate= sdf.parse(yyyymmdd);
-        } catch (ParseException ex) {
-            Logger.getLogger(AnimationInfo.class.getName()).log(Level.SEVERE, null, ex);
-        }
+    public void setStartDate(String startDate) throws ParseException{
+        this.startDate=sdf.parse(startDate);
     }
 
     /**
@@ -74,18 +66,9 @@ public abstract class AnimationInfo {
     public void setEndDate(Date endDate) {
         this.endDate = endDate;
     }
-    public void setEndDate(String yyyymmdd){
-        try {
-            this.endDate= sdf.parse(yyyymmdd);
-        } catch (ParseException ex) {
-            Logger.getLogger(AnimationInfo.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
     
-    public abstract void doSettingEpisode();
-    
-    public void addEpisode(EpisodeInfo episodeInfo){
-        this.episodeInfoList.add(episodeInfo);
+    public void setEndDate(String endDate) throws ParseException{
+        this.startDate=sdf.parse(endDate);
     }
     
     
